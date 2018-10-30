@@ -30,37 +30,13 @@
 \section{Project Summary}
 %What is multimodal imaging ?
 \subsection{Overview}
-Noninvasive imaging techniques such as structural magnetic resonance imaging (S-MRI), diffusion MRI (D-MRI), functional MRI (F-MRI) and
-positron emission tomography (PET) play a key role in learning structural and functional properties of the brain.
-These different imaging modalities provide complementary information necessary to understand  the working dynamics of the brain. 
-%They combine Combining multimodal brain imaging data provides more information for individual subjects.
-% by exploiting the rich multimodal information that exists.
-However, effective processing, fusion, analysis, and visualization of multimodal data is challenging. 
-Most of the processing tasks associated with multimodal imaging are compute and data intensive.
-The other challenge stems from the presence of explicit variance and heteroginity across datasets, making it difficult to extract features and study a phenomena (disease). 
-Heteroginity in data arises due to variations in imaging resolutions or due to varying spatial-temporal dynamics.
-% across the dataset. 
-%For instance, individuals belong to a range of disease subtypes gives rise to phenotypic heterogeneity and those who are at different stages of a dynamic disease produces temporal heterogeneity.
+%Noninvasive imaging techniques such as structural magnetic resonance imaging (S-MRI), diffusion MRI (D-MRI), functional MRI (F-MRI) and positron emission tomography (PET) play a key role in learning structural and functional properties of the brain. These different imaging modalities provide complementary information necessary to understand  the working dynamics of the brain.  However, effective processing, fusion, analysis, and visualization of multimodal data is challenging.  Most of the processing tasks associated with multimodal imaging are compute and data intensive. The other challenge stems from the presence of explicit variance and heteroginity across datasets, making it difficult to extract features and study a phenomena (disease).  Heteroginity in data arises due to variations in imaging resolutions or due to varying spatial-temporal dynamics. With our proposed collaborative research, we intend to address these fundamental challenges associated with multimodal imaging. We will begin by developing parallel algorithms and tools tailored towards scaling compute- and data- intensive processing tasks.  In particular, we will design a parallel data conversion tool that can efficiently transform data from one format to the other. We will also explore techniques to parallelize 3D volume segmentation. Finally, we propose to develop a machine-learning based performance model, that can provide valuable insight into data, help steer analysis in the right direction, and can also eventually  predict both patient outcome (clinical measures) and pathological progression based on a certain snapshot in space and time.
 
-%There are two main issues faced by clinicians: 
-%\begin{enumerate}
-%	\setlength\itemsep{-0.2em}
-%	\item Data management and scaling related challenges: Processing tasks are comutationally expensive and often produces large volumes of data
-%	\item Analysis related challenges: explicit variance and heteroginity within the acquired datasets, makes it challenging to extract features and study a phenomena (disease). 
-%\end{enumerate}
-% as well as the fundamental biophysical mechanisms that are involved in determining the character of the images.
+Noninvasive imaging techniques, such as structural magnetic resonance imaging (S-MRI), diffusion MRI (D-MRI), functional MRI (F-MRI) and positron emission tomography (PET), play a key role in learning structural and functional properties of the brain. These different imaging modalities provide complementary biomarkers necessary to understand the working dynamics of the brain. However, effective processing, fusion, analysis, and visualization of multimodal data are challenging. Most of the processing tasks associated with multimodal imaging are compute and data intensive. The other challenge stems from the presence of explicit variance and heterogeneity across datasets, making it difficult to extract features and study a phenomena (disease). Potential sources of heterogeneity in data include variations in imaging resolutions, spatial-temporal dynamics, disease phenotypes, and patient demographics. With our proposed collaborative research, we intend to address these fundamental challenges associated with multimodal imaging. We will begin by developing parallel algorithms and tools tailored towards scaling compute- and data- intensive processing tasks. In particular, we will design a parallel data conversion tool that can efficiently transform data from one format to the other. We will also explore techniques to parallelize 3D volume segmentation. Finally, we propose to develop a machine-learning based performance model that can provide valuable insight into data, help guide quantitative analysis workflow, and can eventually predict both patient outcome (clinical measures) and pathological progression based on a certain imaging snapshot in space and time.	
 
-With our proposed collaborative research, we intend to address these fundamental challenges associated with multimodal imaging.
-We will begin by developing parallel algorithms and tools tailored towards scaling compute- and data- intensive processing tasks. 
-In particular, we will design a parallel data conversion tool that can efficiently transform data from one format to the other.
-We will also explore techniques to parallelize 3D volume segmentation.
 %Next we want to look at scaling 3D volume segmentation; various segmentation techniques of different accuracy and degree of complexity have been developed and reported in the literature. Atlas based segmentation, clustering, threshholding and machine learning based approaches are some of the popular techniques.
 %we will target two of the most compute intensteps such as data format conversion and segmentation.
 %We propose to address the computational and data management related challenges by developing parallel scalable tools and algorithms tailored towards processing steps such as data format conversion and segmentation. 
-Finally, we propose to develop a machine-learning based performance model, that can provide valuable insight into data, help steer analysis in the right direction, and can also eventually 
-predict both patient outcome (clinical measures) and pathological progression based on a certain snapshot in space and time.
-%For, the later problem, we intend to develop a deep learning based performance model, that can 
-%With both these steps in order, we would have trnsformed the existing inefficient end-to-end data movement framwork to an efficient scalable feedback driven data movement and analysis framework.
 
 \subsection{Intellectual merit}
 \begin{enumerate}
@@ -117,7 +93,7 @@ Describing the interdisciplinary research area to be explored and the innovative
 	\centering
 	\begin{subfigure}{1\textwidth}
 		\centering
-		\includegraphics[width=\textwidth, height=4.5cm]{Existing_font.pdf}
+		\includegraphics[width=\textwidth, height=4.5cm]{Existing.pdf}
 	\end{subfigure}
 	\caption {End-to-end movement and analysis framework of multimodal brain imaging data. The process begins with data being acquired from MRI and PET scanners, followed by pre-processing and analysis phases. The pre-processing phase includes the conversion of the data from the clinically used DICOM format to the analysis appropriate nifti format, followed by segmentation of the brain into regions such as the white matter, grey matter and XYZ. Once the pre-processing step finishes, the data is again converted back to the DICOM format which is then used to perform multimodal analyses using the MIM software framework.}
 	\label{fig:theta_sens}
